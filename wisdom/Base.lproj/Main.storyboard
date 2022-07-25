@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wisdom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUa-TP-vMu">
+                                <rect key="frame" x="42" y="283" width="330" height="330"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сложнее всего начать действовать, все остальное зависит только от упорства" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVp-Ba-fB0">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Сложнее всего начать действовать, все остальное зависит только от упорства" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-Ir-24x">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="113"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E67-e5-T7R">
+                                        <rect key="frame" x="0.0" y="153" width="330" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="0AY-h8-MZh"/>
+                                    <constraint firstItem="ohe-Ir-24x" firstAttribute="leading" secondItem="mUa-TP-vMu" secondAttribute="leading" id="3vw-Xu-org"/>
+                                    <constraint firstItem="E67-e5-T7R" firstAttribute="top" secondItem="ohe-Ir-24x" secondAttribute="bottom" constant="40" id="4fA-tR-SmH"/>
+                                    <constraint firstItem="E67-e5-T7R" firstAttribute="leading" secondItem="mUa-TP-vMu" secondAttribute="leading" id="9OE-Ek-NpK"/>
+                                    <constraint firstAttribute="height" constant="330" id="X9C-so-ll1"/>
+                                    <constraint firstAttribute="trailing" secondItem="ohe-Ir-24x" secondAttribute="trailing" id="YOm-le-VLh"/>
+                                    <constraint firstAttribute="trailing" secondItem="E67-e5-T7R" secondAttribute="trailing" id="r7E-nw-SoQ"/>
+                                    <constraint firstItem="ohe-Ir-24x" firstAttribute="top" secondItem="mUa-TP-vMu" secondAttribute="top" id="xjR-SC-Jzx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="oVp-Ba-fB0"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q92-92-hgr">
+                                <rect key="frame" x="177" y="708" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Xdn-GA-NRd"/>
+                                    <constraint firstAttribute="height" constant="60" id="sjU-mI-GUe"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGray3Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrow.right.circle" catalog="system" cornerStyle="capsule">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40" weight="thin"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonNextQuotes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dN-TQ-KdH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="mUa-TP-vMu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0QB-qc-UhU"/>
+                            <constraint firstItem="q92-92-hgr" firstAttribute="top" secondItem="mUa-TP-vMu" secondAttribute="bottom" constant="95" id="kGw-cE-4bM"/>
+                            <constraint firstItem="q92-92-hgr" firstAttribute="centerX" secondItem="mUa-TP-vMu" secondAttribute="centerX" id="khM-dg-edC"/>
+                            <constraint firstItem="mUa-TP-vMu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="puw-sI-GsM"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QKR-2h-b52" appends="YES" id="B8B-TP-EC5"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="labelAuthor" destination="E67-e5-T7R" id="CDy-aF-iRA"/>
+                        <outlet property="labelButtonNext" destination="q92-92-hgr" id="Kjt-cN-CI8"/>
+                        <outlet property="labelQuotes" destination="oVp-Ba-fB0" id="2lY-Nk-S97"/>
+                        <outlet property="textLabelQuotes" destination="ohe-Ir-24x" id="laF-ZO-R6h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="QKR-2h-b52">
+                    <connections>
+                        <action selector="gestureNextQuotes:" destination="BYZ-38-t0r" id="EZb-Jb-Po3"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
