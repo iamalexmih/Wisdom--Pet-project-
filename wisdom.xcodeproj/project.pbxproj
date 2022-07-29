@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		949F35DABEE9EDF567C30AE1 /* Pods_wisdom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DF2B010E41B123EB5479B /* Pods_wisdom.framework */; };
+		B53E5FF1288EAB570062CB0E /* StorageManagerFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E5FF0288EAB570062CB0E /* StorageManagerFirebase.swift */; };
 		B57005B6288B30AC0093CA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57005B5288B30AC0093CA29 /* AppDelegate.swift */; };
 		B57005B8288B30AC0093CA29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57005B7288B30AC0093CA29 /* SceneDelegate.swift */; };
 		B57005BA288B30AC0093CA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57005B9288B30AC0093CA29 /* ViewController.swift */; };
@@ -16,12 +16,13 @@
 		B57005C2288B30AD0093CA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57005C0288B30AD0093CA29 /* LaunchScreen.storyboard */; };
 		B57005CA288B30CB0093CA29 /* QuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57005C9288B30CB0093CA29 /* QuotesModel.swift */; };
 		B57005CC288DCDDC0093CA29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B57005CB288DCDDC0093CA29 /* GoogleService-Info.plist */; };
+		B5ABC1C32893CF27000EA492 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B5ABC1C22893CF27000EA492 /* FirebaseDatabase */; };
+		B5ABC1C52893CF27000EA492 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B5ABC1C42893CF27000EA492 /* FirebaseDatabaseSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		039DF2B010E41B123EB5479B /* Pods_wisdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wisdom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B5B66683648BE9B771A7BEC /* Pods-wisdom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisdom.release.xcconfig"; path = "Target Support Files/Pods-wisdom/Pods-wisdom.release.xcconfig"; sourceTree = "<group>"; };
-		B57005B2288B30AC0093CA29 /* wisdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wisdom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B53E5FF0288EAB570062CB0E /* StorageManagerFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerFirebase.swift; sourceTree = "<group>"; };
+		B57005B2288B30AC0093CA29 /* wisdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = wisdom.app; path = "/Users/aleksejpoprockij/Documents/programming/Study/_alex_Pet_Projects/wisdom/build/Debug-iphoneos/wisdom.app"; sourceTree = "<absolute>"; };
 		B57005B5288B30AC0093CA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B57005B7288B30AC0093CA29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B57005B9288B30AC0093CA29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		B57005C3288B30AD0093CA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57005C9288B30CB0093CA29 /* QuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesModel.swift; sourceTree = "<group>"; };
 		B57005CB288DCDDC0093CA29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E3AE191675EAC9E0F05DDFC4 /* Pods-wisdom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wisdom.debug.xcconfig"; path = "Target Support Files/Pods-wisdom/Pods-wisdom.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,30 +39,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				949F35DABEE9EDF567C30AE1 /* Pods_wisdom.framework in Frameworks */,
+				B5ABC1C52893CF27000EA492 /* FirebaseDatabaseSwift in Frameworks */,
+				B5ABC1C32893CF27000EA492 /* FirebaseDatabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D011F0B8D2E9FDB3BC1FE03 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E3AE191675EAC9E0F05DDFC4 /* Pods-wisdom.debug.xcconfig */,
-				3B5B66683648BE9B771A7BEC /* Pods-wisdom.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		93F216337EB2D31B4FEC00AF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				039DF2B010E41B123EB5479B /* Pods_wisdom.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B53E5FEF288EA74E0062CB0E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,18 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				B57005B4288B30AC0093CA29 /* wisdom */,
-				B57005B3288B30AC0093CA29 /* Products */,
-				3D011F0B8D2E9FDB3BC1FE03 /* Pods */,
-				93F216337EB2D31B4FEC00AF /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		B57005B3288B30AC0093CA29 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B57005B2288B30AC0093CA29 /* wisdom.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B57005B4288B30AC0093CA29 /* wisdom */ = {
@@ -94,6 +67,7 @@
 			children = (
 				B53E5FEF288EA74E0062CB0E /* Model */,
 				B57005B5288B30AC0093CA29 /* AppDelegate.swift */,
+				B53E5FF0288EAB570062CB0E /* StorageManagerFirebase.swift */,
 				B57005B7288B30AC0093CA29 /* SceneDelegate.swift */,
 				B57005B9288B30AC0093CA29 /* ViewController.swift */,
 				B57005BB288B30AC0093CA29 /* Main.storyboard */,
@@ -112,17 +86,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B57005C6288B30AD0093CA29 /* Build configuration list for PBXNativeTarget "wisdom" */;
 			buildPhases = (
-				0ABBD5C87738E6D6B3610803 /* [CP] Check Pods Manifest.lock */,
 				B57005AE288B30AC0093CA29 /* Sources */,
 				B57005AF288B30AC0093CA29 /* Frameworks */,
 				B57005B0288B30AC0093CA29 /* Resources */,
-				1B59988E91875779A0EAF058 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = wisdom;
+			packageProductDependencies = (
+				B5ABC1C22893CF27000EA492 /* FirebaseDatabase */,
+				B5ABC1C42893CF27000EA492 /* FirebaseDatabaseSwift */,
+			);
 			productName = wisdom;
 			productReference = B57005B2288B30AC0093CA29 /* wisdom.app */;
 			productType = "com.apple.product-type.application";
@@ -151,7 +127,10 @@
 				Base,
 			);
 			mainGroup = B57005A9288B30AC0093CA29;
-			productRefGroup = B57005B3288B30AC0093CA29 /* Products */;
+			packageReferences = (
+				B5ABC1C12893CF27000EA492 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = B57005A9288B30AC0093CA29;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -174,53 +153,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0ABBD5C87738E6D6B3610803 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wisdom-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1B59988E91875779A0EAF058 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-wisdom/Pods-wisdom-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-wisdom/Pods-wisdom-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wisdom/Pods-wisdom-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		B57005AE288B30AC0093CA29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53E5FF1288EAB570062CB0E /* StorageManagerFirebase.swift in Sources */,
 				B57005CA288B30CB0093CA29 /* QuotesModel.swift in Sources */,
 				B57005BA288B30AC0093CA29 /* ViewController.swift in Sources */,
 				B57005B6288B30AC0093CA29 /* AppDelegate.swift in Sources */,
@@ -368,7 +306,6 @@
 		};
 		B57005C7288B30AD0093CA29 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3AE191675EAC9E0F05DDFC4 /* Pods-wisdom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,7 +335,6 @@
 		};
 		B57005C8288B30AD0093CA29 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B5B66683648BE9B771A7BEC /* Pods-wisdom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +384,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B5ABC1C12893CF27000EA492 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B5ABC1C22893CF27000EA492 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5ABC1C12893CF27000EA492 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		B5ABC1C42893CF27000EA492 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5ABC1C12893CF27000EA492 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B57005AA288B30AC0093CA29 /* Project object */;
 }

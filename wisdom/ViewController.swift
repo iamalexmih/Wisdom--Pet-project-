@@ -11,38 +11,75 @@ import FirebaseDatabase
 
 class ViewController: UIViewController {
 
-    let quotes = Quotes()
+    var ref: DatabaseReference!
+    var refID: DatabaseReference!
+    var quoteLoad: QuotesModel?
+    var countQuotes: Int!
     
-    @IBOutlet weak var labelQuotes: UILabel!
     @IBOutlet weak var labelAuthor: UILabel!
     @IBOutlet weak var textLabelQuotes: UITextView!
     @IBOutlet weak var labelButtonNext: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        Database.database().reference().child("quotes").setValue(["quotestext" : "Что разум человека может постигнуть и во что он может поверить, того он способен достичь.", "author" : "Наполеон Хилл, журналист и писатель."])
-        updateTextLabel()
+        ref = Database.database().reference().child("quotes")
+        refID = Database.database().reference().child("countQuotes")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+        loadTextQuoteDelay()
+    }
+    
     @IBAction func buttonNextQuotes(_ sender: UIButton) {
-        updateTextLabel()
+        loadData()
+        printName()
     }
     
     @IBAction func gestureNextQuotes(_ sender: UISwipeGestureRecognizer) {
-        updateTextLabel()
+        loadData()
+        printName()
     }
     
-    func updateTextLabel() {
-        textLabelQuotes.text = " \" \(quotes.quotesStorage.randomElement()![0]) \""
-        labelAuthor.text = quotes.quotesStorage.randomElement()![1]
-        textLabelQuotes.sizeToFit()
+    func loadData() {
+//        textLabelQuotes.sizeToFit()
+        
+        refID.observe(.value) { snapshot in
+            guard let value = snapshot.value, snapshot.exists() else {
+                print("snapshot ID was not got")
+                return
+            }
+            self.countQuotes = value as! Int
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            let randomNumber = (1...self.countQuotes).randomElement()!
+            print(randomNumber)
+            self.ref.child("\(randomNumber)").observe(.value) { [weak self] snapshot in
+                guard let value = snapshot.value, snapshot.exists() else {
+                    print("snapshot Quotes was not got")
+                    return
+                }
+                self?.quoteLoad = QuotesModel(snapshot: snapshot)
+            }
+        }
     }
     
-    func updateLabel() {
-        labelQuotes.text = quotes.quotesStorage.randomElement()![0]
-        labelAuthor.text = quotes.quotesStorage.randomElement()![1]
+    
+    
+    func printName() {
+        textLabelQuotes.text = " \" \(quoteLoad!.quote) \""
+        labelAuthor.text = quoteLoad?.author
     }
+    
+    func loadTextQuoteDelay() {
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            self.textLabelQuotes.text = " \" \(self.quoteLoad!.quote) \""
+            self.labelAuthor.text = self.quoteLoad?.author
+        }
+    }
+
 }
 

@@ -28,7 +28,6 @@
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Сложнее всего начать действовать, все остальное зависит только от упорства" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-Ir-24x">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="113"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -40,7 +39,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="0AY-h8-MZh"/>
@@ -76,7 +74,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mUa-TP-vMu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0QB-qc-UhU"/>
@@ -91,7 +89,6 @@
                     <connections>
                         <outlet property="labelAuthor" destination="E67-e5-T7R" id="CDy-aF-iRA"/>
                         <outlet property="labelButtonNext" destination="q92-92-hgr" id="Kjt-cN-CI8"/>
-                        <outlet property="labelQuotes" destination="oVp-Ba-fB0" id="2lY-Nk-S97"/>
                         <outlet property="textLabelQuotes" destination="ohe-Ir-24x" id="laF-ZO-R6h"/>
                     </connections>
                 </viewController>
@@ -110,11 +107,11 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
