@@ -18,6 +18,7 @@
 		B57005CC288DCDDC0093CA29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B57005CB288DCDDC0093CA29 /* GoogleService-Info.plist */; };
 		B5ABC1C32893CF27000EA492 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B5ABC1C22893CF27000EA492 /* FirebaseDatabase */; };
 		B5ABC1C52893CF27000EA492 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B5ABC1C42893CF27000EA492 /* FirebaseDatabaseSwift */; };
+		B5ABC1C82893D826000EA492 /* Снимок экрана 2022-07-29 в 11.48.12.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ABC1C72893D826000EA492 /* Снимок экрана 2022-07-29 в 11.48.12.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B57005C3288B30AD0093CA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57005C9288B30CB0093CA29 /* QuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesModel.swift; sourceTree = "<group>"; };
 		B57005CB288DCDDC0093CA29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5ABC1C72893D826000EA492 /* Снимок экрана 2022-07-29 в 11.48.12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2022-07-29 в 11.48.12.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		B57005B4288B30AC0093CA29 /* wisdom */ = {
 			isa = PBXGroup;
 			children = (
+				B5ABC1C62893D80D000EA492 /* screenshots */,
 				B53E5FEF288EA74E0062CB0E /* Model */,
 				B57005B5288B30AC0093CA29 /* AppDelegate.swift */,
 				B53E5FF0288EAB570062CB0E /* StorageManagerFirebase.swift */,
@@ -77,6 +80,14 @@
 				B57005CB288DCDDC0093CA29 /* GoogleService-Info.plist */,
 			);
 			path = wisdom;
+			sourceTree = "<group>";
+		};
+		B5ABC1C62893D80D000EA492 /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				B5ABC1C72893D826000EA492 /* Снимок экрана 2022-07-29 в 11.48.12.png */,
+			);
+			path = screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57005C2288B30AD0093CA29 /* LaunchScreen.storyboard in Resources */,
+				B5ABC1C82893D826000EA492 /* Снимок экрана 2022-07-29 в 11.48.12.png in Resources */,
 				B57005CC288DCDDC0093CA29 /* GoogleService-Info.plist in Resources */,
 				B57005BF288B30AD0093CA29 /* Assets.xcassets in Resources */,
 				B57005BD288B30AC0093CA29 /* Main.storyboard in Resources */,
