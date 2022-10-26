@@ -15,15 +15,13 @@
 		B57005BF288B30AD0093CA29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B57005BE288B30AD0093CA29 /* Assets.xcassets */; };
 		B57005C2288B30AD0093CA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57005C0288B30AD0093CA29 /* LaunchScreen.storyboard */; };
 		B57005CA288B30CB0093CA29 /* QuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57005C9288B30CB0093CA29 /* QuotesModel.swift */; };
-		B57005CC288DCDDC0093CA29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B57005CB288DCDDC0093CA29 /* GoogleService-Info.plist */; };
 		B5ABC1C32893CF27000EA492 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B5ABC1C22893CF27000EA492 /* FirebaseDatabase */; };
 		B5ABC1C52893CF27000EA492 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B5ABC1C42893CF27000EA492 /* FirebaseDatabaseSwift */; };
-		B5ABC1C82893D826000EA492 /* screenshots main screen App.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ABC1C72893D826000EA492 /* screenshots main screen App.png */; };
+		B5ABC22F28982AFF000EA492 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5ABC22E28982AFF000EA492 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B53E5FF0288EAB570062CB0E /* StorageManagerFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerFirebase.swift; sourceTree = "<group>"; };
-		B57005B2288B30AC0093CA29 /* wisdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = wisdom.app; path = "/Users/aleksejpoprockij/Documents/programming/Study/_alex_Pet_Projects/wisdom/build/Debug-iphoneos/wisdom.app"; sourceTree = "<absolute>"; };
 		B57005B5288B30AC0093CA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B57005B7288B30AC0093CA29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B57005B9288B30AC0093CA29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,8 +30,8 @@
 		B57005C1288B30AD0093CA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B57005C3288B30AD0093CA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57005C9288B30CB0093CA29 /* QuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesModel.swift; sourceTree = "<group>"; };
-		B57005CB288DCDDC0093CA29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B5ABC1C72893D826000EA492 /* screenshots main screen App.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshots main screen App.png"; sourceTree = "<group>"; };
+		B5ABC22D2898290F000EA492 /* wisdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wisdom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5ABC22E28982AFF000EA492 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B53E225B2908401C0038C278 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B57005B5288B30AC0093CA29 /* AppDelegate.swift */,
+				B57005B7288B30AC0093CA29 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		B53E5FEF288EA74E0062CB0E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,33 +68,24 @@
 			isa = PBXGroup;
 			children = (
 				B57005B4288B30AC0093CA29 /* wisdom */,
+				B5ABC22D2898290F000EA492 /* wisdom.app */,
 			);
 			sourceTree = "<group>";
 		};
 		B57005B4288B30AC0093CA29 /* wisdom */ = {
 			isa = PBXGroup;
 			children = (
-				B5ABC1C62893D80D000EA492 /* screenshots */,
 				B53E5FEF288EA74E0062CB0E /* Model */,
-				B57005B5288B30AC0093CA29 /* AppDelegate.swift */,
+				B53E225B2908401C0038C278 /* App */,
 				B53E5FF0288EAB570062CB0E /* StorageManagerFirebase.swift */,
-				B57005B7288B30AC0093CA29 /* SceneDelegate.swift */,
 				B57005B9288B30AC0093CA29 /* ViewController.swift */,
 				B57005BB288B30AC0093CA29 /* Main.storyboard */,
 				B57005BE288B30AD0093CA29 /* Assets.xcassets */,
 				B57005C0288B30AD0093CA29 /* LaunchScreen.storyboard */,
 				B57005C3288B30AD0093CA29 /* Info.plist */,
-				B57005CB288DCDDC0093CA29 /* GoogleService-Info.plist */,
+				B5ABC22E28982AFF000EA492 /* GoogleService-Info.plist */,
 			);
 			path = wisdom;
-			sourceTree = "<group>";
-		};
-		B5ABC1C62893D80D000EA492 /* screenshots */ = {
-			isa = PBXGroup;
-			children = (
-				B5ABC1C72893D826000EA492 /* screenshots main screen App.png */,
-			);
-			path = screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,7 +109,7 @@
 				B5ABC1C42893CF27000EA492 /* FirebaseDatabaseSwift */,
 			);
 			productName = wisdom;
-			productReference = B57005B2288B30AC0093CA29 /* wisdom.app */;
+			productReference = B5ABC22D2898290F000EA492 /* wisdom.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,10 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57005C2288B30AD0093CA29 /* LaunchScreen.storyboard in Resources */,
-				B5ABC1C82893D826000EA492 /* screenshots main screen App.png in Resources */,
-				B57005CC288DCDDC0093CA29 /* GoogleService-Info.plist in Resources */,
 				B57005BF288B30AD0093CA29 /* Assets.xcassets in Resources */,
 				B57005BD288B30AC0093CA29 /* Main.storyboard in Resources */,
+				B5ABC22F28982AFF000EA492 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -72,21 +72,27 @@
                                     <action selector="buttonNextQuotes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dN-TQ-KdH"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Vzo-ci-dEn">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mUa-TP-vMu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0QB-qc-UhU"/>
+                            <constraint firstItem="Vzo-ci-dEn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DAG-mb-fNq"/>
                             <constraint firstItem="q92-92-hgr" firstAttribute="top" secondItem="mUa-TP-vMu" secondAttribute="bottom" constant="95" id="kGw-cE-4bM"/>
                             <constraint firstItem="q92-92-hgr" firstAttribute="centerX" secondItem="mUa-TP-vMu" secondAttribute="centerX" id="khM-dg-edC"/>
                             <constraint firstItem="mUa-TP-vMu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="puw-sI-GsM"/>
+                            <constraint firstItem="Vzo-ci-dEn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yMy-qD-MBe"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="QKR-2h-b52" appends="YES" id="B8B-TP-EC5"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Vzo-ci-dEn" id="hbq-K0-bg2"/>
                         <outlet property="labelAuthor" destination="E67-e5-T7R" id="CDy-aF-iRA"/>
                         <outlet property="labelButtonNext" destination="q92-92-hgr" id="Kjt-cN-CI8"/>
                         <outlet property="textLabelQuotes" destination="ohe-Ir-24x" id="laF-ZO-R6h"/>
@@ -103,7 +109,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
+        <image name="arrow.right.circle" catalog="system" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
