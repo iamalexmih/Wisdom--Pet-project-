@@ -86,9 +86,28 @@ class ViewController: UIViewController {
     }
     
     
+    private func animateLabel(textLabelQuotes: UITextView,
+                              labelAuthor: UILabel,
+                              randomQuotesModel: QuotesModel) {
+
+        UIView.transition(with: textLabelQuotes,
+                          duration: 0.7,
+                          options: .transitionCrossDissolve) {
+            textLabelQuotes.text = " \" \(randomQuotesModel.quote) \""
+        }
+        
+        UIView.transition(with: labelAuthor,
+                          duration: 0.7,
+                          options: .transitionCrossDissolve) {
+            labelAuthor.text = randomQuotesModel.author
+        }
+    }
+    
+    
     private func updateLabel() {
-        textLabelQuotes?.text = " \" \(randomQuotesModel?.quote ?? "Ups...") \""
-        labelAuthor.text = randomQuotesModel?.author
+        animateLabel(textLabelQuotes: textLabelQuotes,
+                     labelAuthor: labelAuthor,
+                     randomQuotesModel: randomQuotesModel ?? QuotesModel(quote: "", author: ""))
     }
 }
 
