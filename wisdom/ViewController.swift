@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 import FirebaseDatabase
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -28,13 +29,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configStartScreen()
-        ref = Database.database().reference().child("quotes")
+        
+        Auth.auth().signInAnonymously { result, err in
+            if let err = err {
+                print("error = \(err.localizedDescription)")
+                return
+            }
+            print("Success")
+        }
+        
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user == nil {
+                print("User is nil")
+                //Auth.auth().signInAnonymously()
+            } else {
+                print("User exist!")
+                self.loadScreen()
+            }
+        }
+        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadScreen()
     }
     
     
@@ -58,6 +76,8 @@ class ViewController: UIViewController {
         labelAuthor.isHidden = true
         textLabelQuotes.isHidden = true
         labelButtonNext.isHidden = true
+        labelButtonNext.layer.cornerRadius = 28
+        labelButtonNext.layer.masksToBounds = true
     }
     
     
@@ -68,6 +88,9 @@ class ViewController: UIViewController {
     
     
     private func loadScreen() {
+        print(#function)
+        ref = Database.database().reference().child("quotes")
+        print("ref = \(ref)")
         StorageManagerFirebase.shared.loadData(ref: ref) { [weak self] arrayQuotesHelpers in
             self?.randomQuotesModel = arrayQuotesHelpers?.randomElement()
             DispatchQueue.main.async {
