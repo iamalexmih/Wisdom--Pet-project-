@@ -35,25 +35,21 @@ class ViewController: UIViewController {
                 print("error = \(err.localizedDescription)")
                 return
             }
-            print("Success")
-        }
-        
-        Auth.auth().addStateDidChangeListener { auth, user in
-            if user == nil {
-                print("User is nil")
-                //Auth.auth().signInAnonymously()
-            } else {
-                print("User exist!")
-                self.loadScreen()
+            
+            if result != nil {
+                DispatchQueue.global(qos: .userInitiated).async {
+                    self.loadScreen()
+               }
             }
         }
         
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil {
+                print("Anonymous login was made login uid = \(user!.uid)")
+            }
+        }
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
     
     
     // MARK: - IBAction
@@ -88,9 +84,7 @@ class ViewController: UIViewController {
     
     
     private func loadScreen() {
-        print(#function)
         ref = Database.database().reference().child("quotes")
-        print("ref = \(ref)")
         StorageManagerFirebase.shared.loadData(ref: ref) { [weak self] arrayQuotesHelpers in
             self?.randomQuotesModel = arrayQuotesHelpers?.randomElement()
             DispatchQueue.main.async {

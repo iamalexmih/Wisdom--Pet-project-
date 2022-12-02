@@ -17,6 +17,8 @@ class StorageManagerFirebase {
     
     func randomLocalQuotesModel() -> QuotesModel {
         guard let randomLocalQuotesModel = arrayQuotesLocal.randomElement() else {
+            print("qos randomLocalQuotesModel = \(qos_class_self().rawValue)")
+            print("Thread randomLocalQuotesModel = \(Thread.current)")
             //придумать одну цитату по дефолту, на случай ошибки. Цитата должна быть лучшая.
             return QuotesModel(quote: "Текст лучшей цитаты", author: "Лучший автор")
         }
@@ -25,8 +27,9 @@ class StorageManagerFirebase {
 
     
     func loadData(ref: DatabaseReference, completion: @escaping ([QuotesModel]?) -> Void) {
+        
         ref.observe(.value) { [weak self] snapshot in
-            guard let value = snapshot.value, snapshot.exists() else {
+            guard snapshot.exists() else {
                 print("snapshot Quotes was not got")
                 return
             }
